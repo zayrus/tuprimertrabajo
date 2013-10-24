@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Tu Primer Trabajo</title> 
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">
+    <link  href="./skins/flat/blue.css" rel="stylesheet">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.icheck.min.js?v=0.9.1"></script>
+    </head>
+    <body>
+		<div id="indexcontainer">					
+			<div id="startscreen" class="quizlayer">
+				<img src="images/jugar.png" onclick = "game.p1();"><br>
+			</div>
+		</div>
+        <div id="appid" class="quizlayer">
+			   <canvas id="quizcanvas" width="1000" height="800"></canvas>
+		</div>
+		
+			<div id="q1" class="quizlayer">
+				<img id="p1" src="images/p1.png"><br>
+			</div>
+			<div id="topavance" class="quizlayer">
+				<img id="tavance" src="images/avance1.png"><br>
+			</div>
+
+			<div id="q2" class="quizlayer">
+				<img id="p2" src="images/p2.png"><br>
+			</div>
+			<div id="topavance2" class="quizlayer">
+				<img id="tavance2" src="images/avance2.png"><br>
+			</div>
+			<div id="next" class="quizlayer">
+				<img id="buttonnext" src="images/siguiente.png" onclick = "game.p2();"><br>
+			</div>
+			<div id="back" class="quizlayer">
+				<img id="buttonback" src="images/anterior.png" onClick="game.p1();"><br>
+			</div>	
+			<div id="home" class="quizlayer">
+				<img id="buttonhome" src="images/home.png" onClick="game.init();"><br>
+			</div>	
+        <div id="check1" class="icheckbox">
+          <ul>     
+              <input tabindex="1" type="checkbox" id="input-1">
+            <br>
+            <br>
+            <br>
+              <input tabindex="2" type="checkbox" id="input-2">
+            <br>
+            <br>
+            <br>
+              <input tabindex="3" type="checkbox" id="input-3">
+            <br>
+            <br>
+            <br>
+              <input tabindex="4" type="checkbox" id="input-4">
+            <br>
+            <br>
+            <br>
+              <input tabindex="5" type="checkbox" id="input-5">
+            <br>
+            <br>
+            <br>
+              <input tabindex="6" type="checkbox" id="input-6">
+          </ul>
+          <script>
+          $(document).ready(function(){
+            var callbacks_list = $('.demo-callbacks ul');
+            $('.icheckbox input').on('ifChecked', function(event){
+              callbacks_list.prepend('<li><span>#' + this.id + '</span> is ' + event.type.replace('if', '').toLowerCase() + '</li>');
+              console.log('1');
+            }).iCheck({
+              checkboxClass: 'icheckbox_flat-blue',
+             
+            });
+            
+          });
+          </script>
+        </div>
+        
+        <div id="check2" class="icheckbox">
+          <ul>     
+              <input tabindex="1" type="checkbox" id="input-21">
+            <br>
+            <br>
+            <br>
+              <input tabindex="2" type="checkbox" id="input-22">
+            <br>
+            <br>
+            <br>
+              <input tabindex="3" type="checkbox" id="input-23">
+            <br>
+            <br>
+            <br>
+              <input tabindex="4" type="checkbox" id="input-24">
+            <br>
+            <br>
+            <br>
+              <input tabindex="5" type="checkbox" id="input-25">
+            <br>
+            <br>
+            <br>
+              <input tabindex="6" type="checkbox" id="input-26">
+            <br>
+            <br>
+              <input tabindex="7" type="checkbox" id="input-27">
+            <br>
+            <br>
+            <br>
+              <input tabindex="8" type="checkbox" id="input-28">
+
+          </ul>
+          <script>
+          $(document).ready(function(){
+            var callbacks_list = $('.demo-callbacks ul');
+            $('.icheckbox input').on('ifCreated ifClicked ifChanged ifChecked ifUnchecked ifDisabled ifEnabled ifDestroyed', function(event){
+              callbacks_list.prepend('<li><span>#' + this.id + '</span> is ' + event.type.replace('if', '').toLowerCase() + '</li>');
+            }).iCheck({
+              checkboxClass: 'icheckbox_flat-blue',
+             
+            });
+          });
+          </script>
+        </div>
+
+       <script src="js/Qgame.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>
