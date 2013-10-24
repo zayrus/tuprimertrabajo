@@ -1,0 +1,77 @@
+  html, body { margin: 0px; padding: 0px; border: 0px; }
+  
+#indexcontainer {
+	position:absolute;
+	width:1000px;
+	height:800px;
+	background: url(images/1jobback.png);
+}
+.quizlayer {
+	width:1000px;
+	height:800px;
+    position:absolute;
+    display:none;
+}
+.icheckbox {
+	width:1000px;
+	height:800px;
+    position:absolute;
+    display:none;
+}
+/* Game Starting Menu Screen */
+#startscreen {
+    top:670px;
+	left: 450px;
+    width:166px;
+	height:59px;
+}
+#q1, #q2 {
+	background: url(images/BGcopy.png);
+}
+#topavance, #topavance2 {
+	left: 150px;
+	width:799px; 
+	height:47px;
+	}
+#q1 #p1 {
+  
+	padding-top:50px;
+    padding-left: 130px;
+}
+#q2 #p2 {
+  
+	padding-top:50px;
+    padding-left: 130px;
+}
+#check1, #check2 {
+  
+	top:130px;
+	left: 160px;
+	/* limito el tamaño sino afecta al funcionamiento de los botones*/
+    width:660px; 
+	height:425px;
+}
+
+
+#next {
+  
+	top:700px;
+	left:700px;
+	width:229px;
+	height:58px;
+
+}
+#back {
+  
+	top:700px;
+	left:70px;
+	width:229px;
+	height:58px;
+}
+#home {
+  
+	top:640px;
+	left:70px;
+	width:186px;
+	height:180px;
+}
