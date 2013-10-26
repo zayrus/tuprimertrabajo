@@ -7,13 +7,13 @@
 	background: url(images/1jobback.png);
 }
 .quizlayer {
-	width:1000px;
+	width:1280px;
 	height:800px;
     position:absolute;
     display:none;
 }
 .icheckbox {
-	width:1000px;
+	width:1280px;
 	height:800px;
     position:absolute;
     display:none;
@@ -25,7 +25,7 @@
     width:166px;
 	height:59px;
 }
-#stick1, #stick2, #stick3, #q1, #q2, #topavance33, #q31, #q32, #q33, #q34, #q35, #q36, #q40, #q51, #q52, #q60, #q70, #q80, #q90  {
+#stick1, #stick2, #stick3, #stick4, #q1, #q2, #topavance33, #q31, #q32, #q33, #q34, #q35, #q36, #q40, #q51, #q52, #q60, #q70, #q80, #q90  {
 	background: url(images/BGcopy.png);
 }
 #topavance, #topavance2, #topavance3, #topavance4, #topavance5, #topavance6, #topavance7, #topavance8, #topavance9 {
@@ -72,7 +72,7 @@
 	height:180px;
 }
 
-#topavance33, #stick1, #stick2, #stick3 {
+#topavance33, #stick1, #stick2, #stick3, stick4 {
 	padding-top:50px;
     padding-left: 130px;
     width:1000px;

@@ -3,6 +3,7 @@ $(window).load(function() {
 
 });
 var bloqueoa = 0;
+var bloqueoc = 0;
 var bloqueod = 0;
             var callbacks_list = $('.demo-callbacks ul');
             $('.icheckbox input').on('ifChecked', function(event){
@@ -26,10 +27,12 @@ var game = {
     $('#next2').hide();
     $('#topavance').hide();
     $('#topavance2').hide();
+     $('#topavance3').hide();
     $('#home').hide();
     $('#stick1').hide(); 
      $('#stick2').hide(); 
      $('#stick3').hide(); 
+      $('#stick4').hide(); 
     $('#nextstick1').hide();
 	},
 	stick1:function()
@@ -44,7 +47,7 @@ var game = {
                  $('#q1').show();
                  $('#q2').hide();
                  $('#check1').show();
-                  $('#check2').hide();
+                 $('#check2').hide();
                  $('#next').show();
                  $('#next2').hide();
                  $('#home').show();
@@ -56,7 +59,12 @@ var game = {
               console.log('chequeado');
               bloqueoa = 1;
               })
-                  $('#input-1').on('ifChecked', function(event){   
+              $('#input-3').on('ifChecked', function(event){   
+              console.log('chequeado');
+              bloqueoc = 1;
+              }) 
+
+               $('#input-4').on('ifChecked', function(event){   
               console.log('chequeado');
               bloqueod = 1;
               }) 
@@ -89,6 +97,9 @@ var game = {
 	                     $('#next2').hide();
 	                     $('#home').show();
                       }
+                      else{
+	                       $('#next2').show();
+                      }
          
                 })  
                 $('#input-22').on('ifChecked', function(event){   
@@ -103,6 +114,9 @@ var game = {
 	                     $('#next2').hide();
 	                     $('#home').show();
                       }
+                      else{
+	                       $('#next2').show();
+                      }
          
                 })  
                 $('#input-23').on('ifChecked', function(event){   
@@ -116,6 +130,9 @@ var game = {
 	                     $('#q2').hide();
 	                     $('#next2').hide();
 	                     $('#home').show();
+                      }
+                      else{
+	                       $('#next2').show();
                       }
          
                 }) 
@@ -158,7 +175,8 @@ var game = {
                   $('#nextstick1').hide();
                 //$('#topavance33').show().delay(2000).fadeOut();
         
-              var prandom = Math.floor((Math.random()*5)+1);
+            //  var prandom = Math.floor((Math.random()*5)+1);
+                var prandom = 2;
               
               console.log(prandom);   
               switch(prandom)
@@ -173,6 +191,28 @@ var game = {
                        case 2:  
                         $('#q32').show();
                         $('#check32').show();
+                        $('#input-321').on('ifChecked', function(event){   
+                       console.log('321 chequeado')  
+                     
+                      if (bloqueoc == 0)
+                      
+                      {
+                        console.log('bloqueo')
+	                     $('#stick4').show();  
+	                     $('#check32').hide();
+	                     $('#q32').hide();
+	                     $('#next2').hide();
+	                     $('#home').show();
+                      }
+                      if (bloqueoc == 1)
+                      {
+                        console.log('bloqueo pasado')
+	                     $('#next36').show()
+                      }
+         
+                }) 
+
+                      
                         break;
                        case 3:
                        $('#q33').show();
