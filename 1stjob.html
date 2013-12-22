@@ -1,10 +1,12 @@
 <html>
     <head>
+      <meta charset="UTF-8" />
         <title>Tu Primer Trabajo</title> 
     <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">
-    <link  href="./skins/flat/blue.css" rel="stylesheet">
+   <link href="./skins/line/blue.css" rel="stylesheet">
     <script src="./js/jquery.js"></script>
     <script src="./js/jquery.icheck.min.js?v=0.9.1"></script>
+    <script src="./js/dragdrop.js"></script>
     </head>
     <body>
 		<div id="indexcontainer">					
@@ -15,456 +17,608 @@
            <div id="appid" class="quizlayer">
 			   <canvas id="quizcanvas" width="1280" height="800"></canvas>
 		   </div>
-		  <div id="stick1" class="quizlayer">
+		   <div id="stickplayer" class="stick">
+				<img id="istick0" src="images/stick0.png">
+			</div>
+		   <div id="stick1" class="stick">
 				<img id="istick1" src="images/stick1.png"><br>
 			</div>
-			<div id="stick2" class="quizlayer">
+			<div id="stick2" class="stick">
 				<img id="istick2" src="images/stick2.png"><br>
 			</div>
-			<div id="stick3" class="quizlayer">
+			<div id="stick3" class="stick">
 				<img id="istick3" src="images/stick3.png"><br>
 			</div>
-			<div id="stick4" class="quizlayer">
-				<img id="istick3" src="images/stick4.png"><br>
+			<div id="stick312" class="stick">
+				<img id="istick312" src="images/stick312.png"><br>
 			</div>
-			<div id="q1" class="quizlayer">
+			<div id="stick321" class="stick">
+				<img id="istick321" src="images/stick321.png"><br>
+			</div>
+			<div id="stick323" class="stick">
+				<img id="istick323" src="images/stick323.png"><br>
+			</div>
+			<div id="stick324" class="stick">
+				<img id="istick324" src="images/stick324.png"><br>
+			</div>
+			<div id="stick331" class="stick">
+				<img id="istick331" src="images/stick331.png"><br>
+			</div>
+			<div id="stick4" class="stick">
+				<img id="istick4" src="images/stick4.png"><br>
+			</div>
+			<div id="stick40" class="stick">
+				<img id="istick40" src="images/stick40.png">
+			</div>
+			<div id="stick42" class="stick">
+				<img id="istick42" src="images/stick42.png">
+			</div>
+			<div id="stick43" class="stick">
+				<img id="istick43" src="images/stick43.png">
+			</div>
+			<div id="stick50" class="stick">
+				<img id="istick50" src="images/stick50.png">
+			</div>
+			<div id="stick81" class="stick">
+				<img id="istick81" src="images/stick81.png">
+			</div>
+			<div id="stick82" class="stick">
+				<img id="istick82" src="images/stick82.png">
+			</div>
+			<div id="stickvacio" class="stick">
+				<img id="istickvacio" src="images/stickvacio.png">
+			</div>
+			<div id="avatar1" class="avatar">
+				<img name=1 id="avatar1" src="images/avatar1.png" onclick = "game.playerok(this);">
+			</div>
+			<div id="avatar2" class="avatar">
+				<img name=2 id="avatar2" src="images/avatar2.png" onclick = "game.playerok(this);">
+			</div>
+			<div id="avatar3" class="avatar">
+				<img name=3 id="avatar3" src="images/avatar3.png" onclick = "game.playerok(this);">
+			</div>
+			<div id="avatar4" class="avatar">
+				<img name=4 id="avatar4" src="images/avatar4.png" onclick = "game.playerok(this);">
+			</div>
+			<div id="avatar5" class="avatar">
+				<img name=5 id="avatar5" src="images/avatar5.png" onclick = "game.playerok(this);">
+			</div>
+			<div id="avatar6" class="avatar">
+				<img name=6 id="avatar6" src="images/avatar6.png" onclick = "game.playerok(this);">
+			</div>
+			<div id="avatar7" class="avatar">
+				<img name=7 id="avatar7" src="images/avatar7.png" onclick = "game.playerok(this);">
+			</div>
+			<div id="avatar8" class="avatar">
+				<img name=8 id="avatar8" src="images/avatar8.png" onclick = "game.playerok(this);">
+			</div>
+			<div id="entero1" class="entero">
+				<img id="entero1" src="images/ava1.png">
+			</div>
+			<div id="entero2" class="entero">
+				<img id="entero2" src="images/ava2.png">
+			</div>
+			<div id="entero3" class="entero">
+				<img id="entero3" src="images/ava3.png">
+			</div>
+			<div id="entero4" class="entero">
+				<img id="entero4" src="images/ava4.png">
+			</div>
+			<div id="entero5" class="entero">
+				<img id="entero5" src="images/ava5.png">
+			</div>
+			<div id="entero6" class="entero">
+				<img id="entero6" src="images/ava6.png">
+			</div>
+			<div id="entero7" class="entero">
+				<img id="entero7" src="images/ava7.png">
+			</div>
+			<div id="entero8" class="entero">
+				<img id="entero8" src="images/ava8.png">
+			</div>
+			<div id="q1" class="questions">
 				<img id="p1" src="images/p1.png"><br>
 			</div>
-			<div id="topavance" class="quizlayer">
+			<div id="topavance" class="topavance">
 				<img id="tavance" src="images/avance1.png"><br>
 			</div>
-			<div id="q2" class="quizlayer">
+			<div id="q2" class="questions">
 				<img id="p2" src="images/p2.png"><br>
 		    </div>
-			<div id="q31" class="quizlayer">
+			<div id="q31" class="questions">
 				<img id="p31" src="images/p31.png"><br>
 			</div>
-			<div id="q32" class="quizlayer">
+			<div id="q32" class="questions">
 				<img id="p32" src="images/p32.png"><br>
 			</div>
-			<div id="q33" class="quizlayer">
+			<div id="q33" class="questions">
 				<img id="p33" src="images/p33.png"><br>
 			</div>
-			<div id="q34" class="quizlayer">
+			<div id="q34" class="questions">
 				<img id="p34" src="images/p34.png"><br>
 			</div>
-			<div id="q35" class="quizlayer">
+			<div id="q35" class="questions">
 				<img id="p35" src="images/p35.png"><br>
 			</div>
-			<div id="q36" class="quizlayer">
+			<div id="q36" class="questions">
 				<img id="p36" src="images/p36.png"><br>
 			</div>
-			<div id="q40" class="quizlayer">
+			<div id="q40" class="questions">
 				<img id="p40" src="images/p40.png"><br>
 			</div>
-			<div id="q51" class="quizlayer">
+			<div id="q51" class="questions">
 				<img id="p51" src="images/p51.png"><br>
 			</div>
-		    <div id="q52" class="quizlayer">
+		    <div id="q52" class="questions">
 				<img id="p52" src="images/p52.png"><br>
 			</div>
-			<div id="q60" class="quizlayer">
-				<img id="p60" src="images/p60.png"><br>
+			<div id="q60" class="questions">
+			  <img id="p52" src="images/p60.png">
+			  <br>
+			  <br>
+			  <div id="dniImg" ondrop="drop(event)" ondragover="allowDrop(event)"><p>Llevar DNI</p><br><br></div>
+			  <div id="preocupacionalImg" ondrop="drop(event)" ondragover="allowDrop(event)"><p> ¿Que exámenes te van a hacer?</p> <br></div>
+              <div id="ayunoImg" ondrop="drop(event)" ondragover="allowDrop(event)"><p> ¿Tenés que hacer ayuno?</p> <br></div>
+              <div id="llamadaImg" ondrop="drop(event)" ondragover="allowDrop(event)"><p>Anotar el nombre y teléfono de la persona que me mando</p></div>
 			</div>
-			<div id="q70" class="quizlayer">
+			<div id=drag class=drop>
+			      <img id="dni" src="images/dni.png" draggable="true" ondragstart="drag(event)">
+			      <img id="ayuno" src="images/ayuno.png" draggable="true" ondragstart="drag(event)">       
+                  <img id="llamada" src="images/llamada.png" draggable="true" ondragstart="drag(event)">
+                  <img id="preocupacional" src="images/preocupacional.png" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div id="q70" class="questions">
 				<img id="p70" src="images/p70.png"><br>
 			</div>
-			<div id="q80" class="quizlayer">
+			<div id="sobrea" class="sobre">
+				<img id="isobrea" src="images/sobrecerrado.png" onclick = "game.p70a();"><br>
+			</div>
+			<div id="sobreaa" class="sobre">
+				<img id="isobreaa" src="images/sobreabierto.png">
+			</div>
+			<div id="q70a" class="question">
+				<img id="p70a" src="images/p70a.png"><br>
+			</div>
+			<div id="sobreb" class="sobre">
+				<img id="isobreb" src="images/sobrecerrado.png" onclick = "game.p70b();"><br>
+			</div>
+			<div id="sobreab" class="sobre">
+				<img id="isobreab" src="images/sobreabierto.png">
+			</div>
+			<div id="q70b" class="question">
+				<img id="p70b" src="images/p70b.png"><br>
+			</div>
+			<div id="sobrec" class="sobre">
+				<img id="isobrec" src="images/sobrecerrado.png" onclick = "game.p70c();"><br>
+			</div>
+			<div id="sobreac" class="sobre">
+				<img id="isobreac" src="images/sobreabierto.png">
+			</div>
+			<div id="q70c" class="question">
+				<img id="p70c" src="images/p70c.png"><br>
+			</div>
+			<div id="sobred" class="sobre">
+				<img id="isobred" src="images/sobrecerrado.png" onclick = "game.p70d();"><br>
+			</div>
+			<div id="sobread" class="sobre">
+				<img id="isobread" src="images/sobreabierto.png">
+			</div>
+			<div id="q70d" class="question">
+				<img id="p70d" src="images/p70d.png"><br>
+			</div>
+			<div id="sobree" class="sobre">
+				<img id="isobree" src="images/sobrecerrado.png" onclick = "game.p70e();"><br>
+			</div>
+			<div id="sobreae" class="sobre">
+				<img id="isobreae" src="images/sobreabierto.png">
+			</div>
+			<div id="q70e" class="question">
+				<img id="p70e" src="images/p70e.png"><br>
+			</div>
+			<div id="q80" class="questions">
 				<img id="p80" src="images/p80.png"><br>
 			</div>
-			<div id="q90" class="quizlayer">
-				<img id="p90" src="images/p90.png"><br>
-			</div>
-			<div id="topavance2" class="quizlayer">
+			<div id="topavance2" class="topavance">
 				<img id="tavance2" src="images/avance2.png"><br>
 			</div>
-			<div id="topavance3" class="quizlayer">
+			<div id="topavance3" class="topavance">
 				<img id="tavance3" src="images/avance3.png"><br>
 			</div>
-			<div id="topavance33" class="quizlayer">
+			<div id="topavance33" class="stick">
 				<img id="tavance33" src="images/avance33.png"><br>
 			</div>
-			<div id="topavance4" class="quizlayer">
+			<div id="topavance4" class="topavance">
 				<img id="tavance4" src="images/avance4.png"><br>
 			</div>
-			<div id="topavance5" class="quizlayer">
+			<div id="topavance5" class="topavance">
 				<img id="tavance5" src="images/avance5.png"><br>
 			</div>
-			<div id="topavance6" class="quizlayer">
+			<div id="topavance6" class="topavance">
 				<img id="tavance6" src="images/avance6.png"><br>
 			</div>
-			<div id="topavance7" class="quizlayer">
+			<div id="topavance7" class="topavance">
 				<img id="tavance7" src="images/avance7.png"><br>
 			</div>
-			<div id="topavance8" class="quizlayer">
+			<div id="topavance8" class="topavance">
 				<img id="tavance8" src="images/avance8.png"><br>
 			</div>
-			<div id="topavance9" class="quizlayer">
-				<img id="tavance9" src="images/avance9.png"><br>
+			<div id="setnombre" class="quizlayer">
+			   <textarea id="textnom"class="localstorage" placeholder="Escribi tu Nombre" autofocus></textarea>
+            </div>
+		    <div id="nombrescreen" class="quizlayer">	
+				<span id="nombrej"></span>	
 			</div>
-			<div id="nextstick1" class="quizlayer">
-				<img id="bnexts1" src="images/siguiente.png" onclick = "game.p1();"><br>
+			<div id="nextplayer" class="bnext">
+				<img id="buttonnextplayer" src="images/siguiente.png" onclick = "game.selectplayer();"><br>
 			</div>
-			<div id="next" class="quizlayer">
+			<div id="nextstick1" class="bnext">
+				<img id="webStorageSaveBtn" src="images/siguiente.png" onclick = "game.p1();"><br>
+			</div>
+			<div id="next" class="bnext">
 				<img id="buttonnext" src="images/siguiente.png" onclick = "game.p2();"><br>
 			</div>
-		    <div id="next2" class="quizlayer">
+		    <div id="next2" class="bnext">
 				<img id="buttonnext2" src="images/siguiente.png" onclick = "game.pp3();"><br>
 			</div>
-			<div id="nextinter3" class="quizlayer">
+			<div id="nextinter3" class="bnext">
 				<img id="bnext3" src="images/siguiente.png" onclick = "game.p3();"><br>
 			</div>
 		    
-			<div id="next36" class="quizlayer">
+			<div id="next36" class="bnext">
 				<img id="buttonnext36" src="images/siguiente.png" onclick = "game.p40();"><br>
 			</div>
-			<div id="next40" class="quizlayer">
+			<div id="next40" class="bnext">
+				<img id="buttonnext40" src="images/siguiente.png" onclick = "game.p41();"><br>
+			</div>
+			<div id="next41" class="bnext">
 				<img id="buttonnext40" src="images/siguiente.png" onclick = "game.p51();"><br>
 			</div>
-			<div id="next51" class="quizlayer">
-				<img id="buttonnext51" src="images/siguiente.png" onclick = "game.p52();"><br>
+			<div id="next42" class="bnext">
+				<img id="buttonnext42" src="images/siguiente.png" onclick = "game.p42();"><br>
 			</div>
-			<div id="next52" class="quizlayer">
+			<div id="next52" class="bnext">
 				<img id="buttonnext52" src="images/siguiente.png" onclick = "game.p60();"><br>
 			</div>
-			<div id="next60" class="quizlayer">
+			<div id="next60" class="bnext">
 				<img id="buttonnext60" src="images/siguiente.png" onclick = "game.p70();"><br>
 			</div>
-			<div id="next70" class="quizlayer">
+			<div id="next70" class="bnext">
 				<img id="buttonnext70" src="images/siguiente.png" onclick = "game.p80();"><br>
 			</div>
-			<div id="next80" class="quizlayer">
-				<img id="buttonnext80" src="images/siguiente.png" onclick = "game.p90();"><br>
+			<div id="next80" class="bnext">
+				<img id="buttonnext80" src="images/siguiente.png" onclick = "game.pfinal();"><br>
 			</div>
 			<div id="home" class="quizlayer">
-				<img id="buttonhome" src="images/home.png" onClick="game.init();"><br>
+				<img id="buttonhome" src="images/home.png" onClick="window.location.reload();"><br>
 			</div>	
+			<div id="home8" class="quizlayer">
+				<img id="buttonhome8" src="images/home.png" onClick="window.location.reload();"><br>
+			</div>
+			<div id="exclama1" class="entero">
+				<img id="exclama1" src="images/ava1b.png">
+			</div>
+			<div id="exclama2" class="entero">
+				<img id="exclama2" src="images/ava2b.png">
+			</div>
+			<div id="exclama3" class="entero">
+				<img id="exclama3" src="images/ava3b.png">
+			</div>
+			<div id="exclama4" class="entero">
+				<img id="exclama4" src="images/ava4b.png">
+			</div>
+			<div id="exclama5" class="entero">
+				<img id="exclama5" src="images/ava5b.png">
+			</div>
+			<div id="exclama6" class="entero">
+				<img id="exclama6" src="images/ava6b.png">
+			</div>
+			<div id="exclama7" class="entero">
+				<img id="exclama7" src="images/ava7b.png">
+			</div>
+			<div id="exclama8" class="entero">
+				<img id="exclama8" src="images/ava8b.png">
+			</div>
+			<div id="feliz1" class="entero">
+				<img id="feliz1" src="images/ava1c.png">
+			</div>
+			<div id="feliz2" class="entero">
+				<img id="feliz2" src="images/ava2c.png">
+			</div>
+			<div id="feliz3" class="entero">
+				<img id="feliz3" src="images/ava3c.png">
+			</div>
+			<div id="feliz4" class="entero">
+				<img id="feliz4" src="images/ava4c.png">
+			</div>
+			<div id="feliz5" class="entero">
+				<img id="feliz5" src="images/ava5c.png">
+			</div>
+			<div id="feliz6" class="entero">
+				<img id="feliz6" src="images/ava6c.png">
+			</div>
+			<div id="feliz7" class="entero">
+				<img id="feliz7" src="images/ava7c.png">
+			</div>
+			<div id="feliz8" class="entero">
+				<img id="feliz8" src="images/ava8c.png">
+			</div>
+
+			<div id="helphome" class="entero">
+				<img id="ihelphome" src="images/helphome.png">
+			</div>
+	<div class="skin skin-line">
+       <div class="skin-section">
         <div id="check1" class="icheckbox">
-          <ul>     
+          <ul class="list">     
               <input tabindex="1" type="checkbox" id="input-1">
-            <br>
-            <br>
+               <label for="input-1">Fecha, Horario y Dirección</label>
             <br>
               <input tabindex="2" type="checkbox" id="input-2">
-            <br>
-            <br>
+               <label for="input-2">Nombre del entrevistador</label>
             <br>
               <input tabindex="3" type="checkbox" id="input-3">
-            <br>
-            <br>
+              <label for="input-3">Teléfono y mail</label>
             <br>
               <input tabindex="4" type="checkbox" id="input-4">
-            <br>
-            <br>
+              <label for="input-2">Nombre de la empresa y puesto</label>
             <br>
               <input tabindex="5" type="checkbox" id="input-5">
-            <br>
-            <br>
+              <label for="input-5">Si es una agencia, el nombre y el teléfono de quien te deriva</label>
             <br>
               <input tabindex="6" type="checkbox" id="input-6">
+              <label for="input-6">Cuanto vas a cobrar</label>
           </ul>
         </div>
-        
+        </div>
+        </div>
+       <div class="skin skin-line">
+       <div class="skin-section">
         <div id="check2" class="icheckbox">
-          <ul>     
+          <ul class="list">     
               <input tabindex="1" type="checkbox" id="input-21">
-            <br>
-            <br>
+               <label for="input-21">Averiguar sobre la empresa (buscar en internet a que se dedica)</label>
             <br>
               <input tabindex="2" type="checkbox" id="input-22">
-            <br>
+               <label for="input-22">Averiguar las distintas formas de llegar</label>
             <br>
               <input tabindex="3" type="checkbox" id="input-23">
-            <br>
-            <br>
+               <label for="input-23">Calcular tiempo de más para llegar a horario</label>
             <br>
               <input tabindex="4" type="checkbox" id="input-24">
-            <br>
-            <br>
+              <label for="input-24">Llevar DNI por si lo piden en la entrada</label>
             <br>
               <input tabindex="5" type="checkbox" id="input-25">
-            <br>
-            <br>
+              <label for="input-25">Llevar cv impreso</label>
             <br>
               <input tabindex="6" type="checkbox" id="input-26">
-            <br>
+              <label for="input-26">Tener el celular con crédito</label>
             <br>
               <input tabindex="7" type="checkbox" id="input-27">
-            <br>
-            <br>
+              <label for="input-27">Pensar posibles preguntas que te pueden hacer</label>
             <br>
               <input tabindex="8" type="checkbox" id="input-28">
-
+              <label for="input-28">Concurrir prolijo y con buena presencia</label>
           </ul>
         </div>
+         </div>
+          </div>
+       <div class="skin skin-line">
+       <div class="skin-section">
                 <div id="check31" class="icheckbox">
-          <ul>     
-              <input tabindex="31" type="checkbox" id="input-31">
+          <ul class="list">     
+              <input tabindex="31" type="checkbox" id="input-311">
+              <label for="input-311">Llamar para avisar</label>
             <br>
-            <br>
-            <br>
-              <input tabindex="32" type="checkbox" id="input-32">
+              <input tabindex="32" type="checkbox" id="input-312">
+              <label for="input-312">No llamás</label>
          </ul>
         </div>
         </div>
+        </div>
+       <div class="skin skin-line">
+       <div class="skin-section">
                 <div id="check32" class="icheckbox">
-          <ul>     
+          <ul class="list">     
               <input tabindex="33" type="checkbox" id="input-321">
-            <br>
-            <br>
+                   <label for="input-321">Llamas para avisar</label>
             <br>
               <input tabindex="34" type="checkbox" id="input-322">
-            <br>
-            <br>
+                   <label for="input-322">No llamás y llegás tarde</label>
             <br>
              <input tabindex="35" type="checkbox" id="input-323">
-            <br>
-            <br>
+                  <label for="input-323">Buscas otros medios de transporte</label>
             <br>
             <input tabindex="36" type="checkbox" id="input-324">
+                 <label for="input-324">Volves a tu casa</label>
          </ul>
         </div>
         </div>
+        </div>
+        <div class="skin skin-line">
+        <div class="skin-section">
                 <div id="check33" class="icheckbox">
-          <ul>     
+          <ul class="list">     
               <input tabindex="331" type="checkbox" id="input-331">
-            <br>
-            <br>
+              <label for="input-331">Preguntas en la calle si conocen el lugar</label>
             <br>
               <input tabindex="332" type="checkbox" id="input-332">
-            <br>
-            <br>
+              <label for="input-332">Llamas a la empresa</label>
             <br>
              <input tabindex="333" type="checkbox" id="input-333">
-            <br>
-            <br>
+             <label for="input-333">Llamas a Reciduca o a quien hizo el contacto</label>
             <br>
             <input tabindex="334" type="checkbox" id="input-334">
+            <label for="input-334">Volves a tu casa y llamas para reprogramar</label>
          </ul>
         </div>
+        </div>
+        </div>
+        <div class="skin skin-line">
+        <div class="skin-section">
         <div id="check34" class="icheckbox">
-          <ul>     
+          <ul class="list">     
               <input tabindex="341" type="checkbox" id="input-341">
-            <br>
-            <br>
+               <label for="input-341">Llamas a la empresa</label>
             <br>
               <input tabindex="342" type="checkbox" id="input-342">
+               <label for="input-342">Volves a tu casa y llamás para reprogramar</label>
          </ul>
         </div>
+        </div>
+        </div>
+        <div class="skin skin-line">
+        <div class="skin-section">
                 <div id="check35" class="icheckbox">
-          <ul>     
+          <ul class="list">     
               <input tabindex="351" type="checkbox" id="input-351">
-            <br>
-            <br>
+               <label for="input-351">Llamas a la empresa</label>
             <br>
               <input tabindex="352" type="checkbox" id="input-352">
+               <label for="input-352">Volves a tu casa y llamas para reprogramar</label>
          </ul>
         </div>
         </div>
+        </div>
+        <div class="skin skin-line">
+        <div class="skin-section">
           <div id="check36" class="icheckbox">
-          <ul>     
+          <ul class="list">     
               <input tabindex="361" type="checkbox" id="input-361">
-            <br>
-            <br>
+               <label for="input-361">Tratas de hablar con alguien para avisar que asististe</label>
             <br>
               <input tabindex="362" type="checkbox" id="input-362">
+               <label for="input-362">Preguntas si hay alguien que te pueda atender</label>
+                <br>
+              <input tabindex="363" type="checkbox" id="input-363">
+               <label for="input-363">Preguntas cuando vuelve, pedis los datos de contacto y llamas o envias mail para reprogramar la cita</label>
          </ul>
         </div>
+        </div>
+        </div>
+        <div class="skin skin-line">
+        <div class="skin-section">
         <div id="check40" class="icheckbox">
-          <ul>     
+          <ul class="list">     
               <input tabindex="41" type="checkbox" id="input-41">
-            <br>
-            <br>
+              <label for="input-41">Postura corporal, sentarte derecho</label>
             <br>
               <input tabindex="42" type="checkbox" id="input-42">
-            <br>
-            <br>
+              <label for="input-42">Mirar a los ojos al entrevistador</label>
             <br>
               <input tabindex="43" type="checkbox" id="input-43">
-            <br>
-            <br>
+              <label for="input-43">Pensar bien antes de responder</label>
             <br>
               <input tabindex="44" type="checkbox" id="input-44">
-            <br>
-            <br>
+              <label for="input-44">Hablar educadamente y sin malas palabras</label>
             <br>
               <input tabindex="45" type="checkbox" id="input-45">
-            <br>
-            <br>
+              <label for="input-45">Preguntar sobre las tareas y mostrar interés</label>
             <br>
               <input tabindex="46" type="checkbox" id="input-46">
-            <br>
+              <label for="input-46">No mentir sobre la experiencia y los conocimientos</label>
             <br>
               <input tabindex="47" type="checkbox" id="input-47">
-            <br>
-            <br>
+              <label for="input-47">Preguntar cómo sigue el proceso de selección, cuándo creen que podrán darte una respuesta</label>
             <br>
               <input tabindex="48" type="checkbox" id="input-48">
+              <label for="input-48">Preguntar cuál sera el sueldo</label>
           </ul>
         </div>
-        <div id="check51" class="icheckbox">
-          <ul>     
-              <input tabindex="51" type="checkbox" id="input-51">
-            <br>
-            <br>
-            <br>
-              <input tabindex="52" type="checkbox" id="input-52">
-            <br>
-            <br>
-            <br>
-             <input tabindex="53" type="checkbox" id="input-53">
-            <br>
-            <br>
-            <br>
-            <input tabindex="54" type="checkbox" id="input-54">
-            <br>
-            <br>
-            <br>
-            <input tabindex="55" type="checkbox" id="input-55">
-         </ul>
         </div>
-        <div id="check52" class="icheckbox">
-          <ul>     
-              <input tabindex="521" type="checkbox" id="input-521">
-            <br>
-            <br>
-            <br>
-              <input tabindex="522" type="checkbox" id="input-522">
-             <br>
-            <br>
-            <br>
-              <input tabindex="523" type="checkbox" id="input-523">
-         </ul>
         </div>
-        <div id="check60" class="icheckbox">
-          <ul>     
-              <input tabindex="61" type="checkbox" id="input-61">
+           	<div id="levelstats" class="puntos">
+				<span id="levelscore">Puntaje: 0</span>	   			
+			</div>
+			<div id="finalstats" class="puntos">
+				<span id="finalscore">Puntaje: 0</span>	   			
+			</div>
+	    <div class="skin skin-line">
+        <div class="skin-section">
+         <div id="check80" class="icheckbox2">
+          <ul class="list">     
+            <input tabindex="81" type="checkbox" id="input-81">
+            <label for="input-81">Llegar a horario</label>
             <br>
+            <input tabindex="82" type="checkbox" id="input-82">
+            <label for="input-82">Pedir al supervisor/jefe su celular para poder comunicarse en futuras ocasiones</label>
             <br>
-            <br>
-              <input tabindex="62" type="checkbox" id="input-62">
-            <br>
-            <br>
-            <br>
-             <input tabindex="63" type="checkbox" id="input-63">
-            <br>
-            <br>
-            <br>
-            <input tabindex="64" type="checkbox" id="input-64">
-            <br>
-            <br>
-            <br>
-            <input tabindex="65" type="checkbox" id="input-65">
-            <br>
-            <br>
-            <br>
-            <input tabindex="66" type="checkbox" id="input-66">
-         </ul>
-        </div>
-        <div id="check70" class="icheckbox">
-          <ul>     
-              <input tabindex="71" type="checkbox" id="input-71">
-            <br>
-            <br>
-            <br>
-              <input tabindex="72" type="checkbox" id="input-72">
-            <br>
-            <br>
-            <br>
-             <input tabindex="73" type="checkbox" id="input-73">
-            <br>
-            <br>
-            <br>
-            <input tabindex="74" type="checkbox" id="input-74">
-            <br>
-            <br>
-            <br>
-            <input tabindex="75" type="checkbox" id="input-75">
-            <br>
-            <br>
-            <br>
-            <input tabindex="76" type="checkbox" id="input-76">
-         </ul>
-        </div>
-        <div id="check80" class="icheckbox">
-          <ul>     
-              <input tabindex="81" type="checkbox" id="input-81">
-            <br>
-            <br>
-            <br>
-              <input tabindex="82" type="checkbox" id="input-82">
-            <br>
-            <br>
-            <br>
-             <input tabindex="83" type="checkbox" id="input-83">
-            <br>
-            <br>
+            <input tabindex="83" type="checkbox" id="input-83">
+            <label for="input-83">Ser respetuoso</label>
             <br>
             <input tabindex="84" type="checkbox" id="input-84">
-            <br>
-            <br>
+            <label for="input-84">Mostrar interes</label>
             <br>
             <input tabindex="85" type="checkbox" id="input-85">
-            <br>
-            <br>
+            <label for="input-85">Preguntar si no entiendo algo</label>
             <br>
             <input tabindex="86" type="checkbox" id="input-86">
-            <br>
-            <br>
+            <label for="input-86">Llamar y avisar a primera hora si falto por enfermedad</label>
             <br>
             <input tabindex="87" type="checkbox" id="input-87">
-            <br>
-            <br>
+            <label for="input-87">Llevar certificado medico cuando me reintegro</label>
             <br>
             <input tabindex="88" type="checkbox" id="input-88">
+            <label for="input-88">Avisar si estoy retrasado para llegar</label>
+         </ul>
+        </div>
+        </div>
+        </div>
+        <div class="skin skin-line">
+        <div class="skin-section">
+         <div id="check80b" class="icheckbox3">
+          <ul class="list"> 
+        <input tabindex="89" type="checkbox" id="input-89">
+            <label for="input-89">Cumplir las tareas</label>
             <br>
+            <input tabindex="90" type="checkbox" id="input-90">
+            <label for="input-90">Realizar el trámite en la obra social. Si tengo alguna dificultad consultar con RRHH</label>
             <br>
-            <br>
-            <input tabindex="89" type="checkbox" id="input-89">
-            <br>
-            <br>
-            <br>
-            <input tabindex="90" type="checkbox" id="input-91">
-            <br>
-            <br>
+            <input tabindex="91" type="checkbox" id="input-91">
+            <label for="input-91">Preguntar en RRHH como se realizan los pagos de haberes (transferencia, cheque o efectivo)</label>
             <br>
             <input tabindex="92" type="checkbox" id="input-92">
-            <br>
-            <br>
+            <label for="input-92">Si hay que firmar un contrato, leerlo, firmarlo y pedir una copia.</label>
             <br>
             <input tabindex="93" type="checkbox" id="input-93">
-            <br>
-            <br>
+            <label for="input-93">Guardar todos los recibos de sueldo</label>
             <br>
             <input tabindex="94" type="checkbox" id="input-94">
-            <br>
-            <br>
+            <label for="input-94">Si tenés un problema con algún compañero, hablarlo con tu supervisor de forma respetuosa</label>
             <br>
             <input tabindex="95" type="checkbox" id="input-95">
-            <br>
-            <br>
-            <br>
-            <input tabindex="96" type="checkbox" id="input-96">
-         </ul>
-        </div>
-        <div id="check900" class="icheckbox">
-          <ul>     
-              <input tabindex="901" type="checkbox" id="input-901">
-            <br>
-            <br>
-            <br>
-              <input tabindex="902" type="checkbox" id="input-902">
-            <br>
-            <br>
-            <br>
-             <input tabindex="903" type="checkbox" id="input-903">
-            <br>
-            <br>
-            <br>
-            <input tabindex="904" type="checkbox" id="input-904">
+            <label for="input-95">Darte tiempo para acomodarte en el puesto (no tomar decisiones drásticas y apresuradas)</label>
          </ul>
         </div>
         </div>
+        </div>
+        <script>
+		(function() {
+			
+			var demo = document.querySelector('.localstorage');
+			
+			function supportsLocalStorage() {
+				return typeof(Storage)!== 'undefined';
+			}
+			
+			if (!supportsLocalStorage()) {
+				demo.value = 'No HTML5 localStorage support, soz.';
+			} else {
+				try {
+					setInterval(function() {
+						localStorage.setItem('autosave', demo.value);
+					}, 1000);
+				} catch (e) {
+					if (e == QUOTA_EXCEEDED_ERR) {
+						alert('Quota exceeded!');
+					}
+				}
+				if (localStorage.getItem('autosave')) {
+					demo.value = localStorage.getItem('autosave');
+				}
+			}
+			
+		})();
+		</script>
        <script src="js/Qgame.js" type="text/javascript" charset="utf-8"></script>
     </body>
 </html>
