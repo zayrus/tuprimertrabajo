@@ -1,0 +1,313 @@
+  html, body { margin: 0px; padding: 0px; border: 0px; 	background: url(images/fondo.jpg);}
+
+#indexcontainer {
+	position:absolute;
+	width:800px;
+	height:640px;
+	background: url(images/1jobback.png);
+	left: 250px;
+}
+.quizlayer, .questions, .stick, .bnext, .topavance, .icheckbox, .drop{
+	width:800px;
+	height:640px;
+    position:absolute;
+    display:none;
+    left: 250px;
+    
+}
+
+@font-face { font-family: Archive; src: url('fonts/Archive.otf'); 
+	font-family: Montserrat; src: url('fonts/montserrat-regular.ttf'); 
+	font-family: Pressstart; src: url('fonts/PressStart2P.ttf');
+} 
+/* Game Starting Menu Screen */
+#startscreen {
+    top:500px;
+	left: 320px;
+    width:166px;
+	height:59px;
+}
+.questions, .stick, .dragdrop {
+	background: url(images/fondo.jpg);
+}
+.topavance {
+	left: 400px;
+	top:8 px;
+	width:799px; 
+	height:47px;
+	}
+.questions {
+  
+	padding-top:50px;
+    padding-left: 130px;
+        left: 200px;
+    
+}
+ 
+.icheckbox {
+  
+	top:120px;
+	left: 350px;
+	/* limito el tamaño sino afecta al funcionamiento de los botones*/
+    width:660px; 
+	height:425px;
+	font-family: Montserrat;
+    font-size:20px;
+}
+
+
+.bnext {
+  
+	top:550px;
+	left:1000px;
+	width:229px;
+	height:58px;
+
+}
+
+#home {
+ 
+	top:500px;
+	left:240px;
+	width:186px;
+	height:180px;
+}
+#home8 {
+ 
+	top:500px;
+	left:40px;
+	width:186px;
+	height:180px;
+}
+
+.stick {
+	padding-top:50px;
+    padding-left: 130px;
+    width:800px;
+	height:640px;
+}
+#setnombre {
+	top:75px;
+	left:500px;
+	font-size:18px;
+	width:240px;
+	height:50px;
+
+}
+#setnombre #textnom {
+	font-size:16px;
+	font-family: Pressstart;
+	text-align: center;
+    width:240px;
+	height:50px;
+}
+
+#nombrescreen {
+	top:60px;
+    font-size:40px;
+    font-family: Pressstart;
+    text-align: center;
+    width:850px;
+	height:100px;
+}
+
+#levelstats {
+	left: 625px;
+	top:325px;
+	
+}
+#finalstats {
+	left: 525px;
+	top:480px;
+	
+}
+.puntos {
+    position:absolute;
+	font-size:25px;
+    font-family: Pressstart;
+    width:400px;
+	height:40px;
+	}
+	
+#dniImg, #preocupacionalImg, #ayunoImg, #llamadaImg  {
+	width:180px;
+	height:220px;
+	background:#ffffff;
+	padding:5px;
+	border:4px 
+	solid #000000;
+	float:left;
+	font-size:12px;
+    font-family: pressstart;
+    text-align: center;
+    image-align: center;
+}
+#drag{
+	top:500px;
+	left: 450px;
+}
+
+.question {
+	position:absolute;
+    display:none;
+        left: 200px;
+
+}
+.sobre {
+	width:102px;
+	height:55px;
+	position:absolute;
+    display:none;
+
+}
+#sobrea, #sobreaa{
+	top:220px;
+	left: 375px;
+
+}
+#sobreb, #sobreab {
+
+	top:280px;
+	left: 375px;
+
+}
+#sobrec, #sobreac {
+
+	top:340px;
+	left: 375px;
+
+}
+#sobred, #sobread {
+
+	top:400px;
+	left: 375px;
+
+}
+#sobree, #sobreae {
+
+	top:460px;
+	left: 375px;
+
+}
+#q70a{
+	top:220px;
+	left: 470px;
+    width:707px;
+	height:49px;
+	
+}
+#q70b{
+	top:280px;
+	left: 470px;
+    width:707px;
+	height:49px;
+	
+}
+#q70c{
+	top:340px;
+	left: 470px;
+    width:707px;
+	height:49px;
+	
+}
+#q70d{
+	top:400px;
+	left: 470px;
+    width:707px;
+	height:49px;
+	
+}
+#q70e{
+	top:460px;
+	left: 470px;
+    width:707px;
+	height:49px;
+	
+}
+.icheckbox2 {
+	top:120px;
+	left: 150px;
+	/* limito el tamaño sino afecta al funcionamiento de los botones*/
+    width:500px; 
+	height:425px;
+	font-family: Montserrat;
+    font-size:16px;
+     position:absolute;
+    display:none;
+}
+.icheckbox3 {
+	top:120px;
+	left: 650px;
+	/* limito el tamaño sino afecta al funcionamiento de los botones*/
+    width:500px; 
+	height:425px;
+	font-family: Montserrat;
+    font-size:16px;
+        position:absolute;
+    display:none;
+}
+.avatar {
+	width:143px;
+	height:141px;
+	position:absolute;
+    display:none;
+
+}
+#avatar1{
+	top:200px;
+	left: 400px;
+	
+}
+#avatar2{
+	top:200px;
+	left: 550px;
+	
+}
+#avatar3{
+	top:200px;
+	left: 700px;
+	
+}
+#avatar4{
+	top:200px;
+	left: 850px;
+	
+}
+#avatar5{
+	top:360px;
+	left: 400px;
+	
+}
+#avatar6{
+	top:360px;
+	left: 550px;
+	
+}
+#avatar7{
+	top:360px;
+	left: 700px;
+	
+}
+#avatar8{
+	top:360px;
+	left: 850px;
+	
+}
+.entero {
+	width:122px;
+	height:265px;
+	position:absolute;
+    display:none;
+}
+#entero1, #entero2, #entero3, #entero4, #entero5, #entero6, #entero7, #entero8, #exclama1, #exclama2, #exclama3, #exclama4, #exclama5, #exclama6, #exclama7, #exclama8, #feliz1, #feliz2, #feliz3, #feliz4, #feliz5, #feliz6, #feliz7, #feliz8 {
+	top:200px;
+	left: 600px;
+	
+}
+
+#helphome
+{
+    top:460px;
+	left:180px;
+
+}
