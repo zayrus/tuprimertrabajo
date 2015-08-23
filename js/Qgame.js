@@ -136,8 +136,8 @@ var game = {
 	// Start initializing objects, preloading assets and display start screen
 	init: function(){
 		// Hide all game layers and display the start screen
-    $('#startscreen').show(); //imagen de inicio con boton comenzar
     $('.puntos').hide();
+    $('#startscreen').show(); //imagen de inicio con boton comenzar
     $('.questions').hide();  //oculto la pregunta
     $('.icheckbox').hide();
     $('.topavance').hide();
